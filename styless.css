@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow: hidden;
+  color: white;
+}
+
+/* VIDEO BACKGROUND */
+.galaxy-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* OPENING */
+.opening {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.rocket {
+  width: 200px;
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+}
+
+.astronaut {
+  width: 180px;
+  position: absolute;
+  right: 15%;
+  bottom: 20%;
+  animation: drift 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-30px) rotate(5deg);
+  }
+}
+
+/* LAUNCH */
+.rocket.launch {
+  transform: translateY(-120vh);
+  transition: 2s ease;
+}
+
+/* CARD */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+/* PHOTO FRAME */
+.photo-frame {
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 111, 216, 0.6);
+  margin: 25px 0;
+}
+
+.photo-frame img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* UTIL */
+.hidden {
+  display: none;
+}
+/* ========================= */
+/* 📱 RESPONSIVE MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  /* OPENING */
+  .rocket {
+    width: 110px;
+  }
+
+  .astronaut {
+    width: 80px;
+    right: 5%;
+    bottom: 15%;
+  }
+
+  .hint {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  /* CARD */
+  .card {
+    width: 100%;
+    max-width: 90%;
+    padding: 28px;
+    border-radius: 22px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .message {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* PHOTO FRAME */
+  .photo-frame {
+    margin: 20px 0;
+    padding: 8px;
+  }
+
+  .photo-frame img {
+    border-radius: 12px;
+  }
+}
+
+/* EXTRA SMALL PHONE */
+@media (max-width: 420px) {
+  .rocket {
+    width: 90px;
+  }
+
+  .astronaut {
+    width: 65px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .message {
+    font-size: 0.9rem;
+  }
+}

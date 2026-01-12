@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaxy Love for Tasya</title>
+    <link rel="stylesheet" href="styless.css" />
+  </head>
+  <body>
+    <!-- GALAXY VIDEO BACKGROUND -->
+    <video class="galaxy-video" autoplay muted loop playsinline>
+      <source src="assets/background.mp4" type="video/mp4" />
+    </video>
+
+    <!-- OPENING SCENE -->
+    <div class="opening" id="opening">
+      <img src="assets/roket.png" class="rocket" onclick="launch()" />
+      <img src="assets/Astrounot.png" class="astronaut" />
+      <p class="hint">Klik roket untuk memulai perjalanan cinta ✨</p>
+    </div>
+
+    <!-- CARD CONTENT -->
+    <div class="wrapper hidden" id="content">
+      <div class="card">
+        <h1>Hai Tasya ✨</h1>
+
+        <!-- FOTO -->
+        <div class="photo-frame">
+          <img src="assets/Foto.jpeg" alt="Foto Kita" />
+        </div>
+
+        <p class="message">Di bawah galaxy yang tak berbatas ini, aku memilihmu sebagai semestaku 💖</p>
+      </div>
+    </div>
+
+    <!-- MUSIC -->
+    <audio id="bg-music" loop>
+      <source src="audio/Lagu.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
